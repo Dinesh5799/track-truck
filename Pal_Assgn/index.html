@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Track-Truck</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                
+        <link rel="stylesheet" href="vendors/css/normalize.css">
+        <link rel="stylesheet" href="vendors/css/grid.css">
+        <link rel="stylesheet" href="vendors/css/ionicons.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">        
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <header id="Home">
+            <nav>
+                <div class='row'>
+                    <img src="logo.jpg" alt="logo" class="logo">
+                    <ul class="main-nav">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#cityShown">Our Cities</a></li>                        
+                        <li><a href="#contact">Contact Us</a></li>                        
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="back-text-box">
+                <h1>
+                   Wanna track your truck!<br>Now it's easy here. 
+                </h1>
+                <a class="btn btn-full" href="#tracking">Track my truck</a>
+                <a class = "btn btn-ghost" href="#features">Show me more</a>
+            </div>
+        </header>
+        <section class="section-features" id="features">
+            <div class="row">                
+                <h2>
+                    No Worries &mdash; tracking made easy
+                </h2>
+                <p class="long-copy">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-4 box">
+                    <i class="icon ion-md-pin icon-big"></i>
+                    <h3> SimplerTracking</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="icon ion-md-heart icon-big"></i>
+                    <h3>Long Network</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="icon ion-md-notifications icon-big"></i>
+                    <h3>Live Notifications</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="icon ion-md-analytics icon-big"></i>
+                    <h3>Simple Analytics</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </section>
+        <section class="map" id="tracking">
+            <div class="row search">                
+                <input id="fetch-truck" class="search-text" type="text" placeholder="Search with truck number(T-A01)">                
+                <span class="search-icon"><button onclick=startTracking()><i class="icon ion-md-search"></i></button></span>
+            </div>
+            <div id="show-map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0eF-FH_2F1odauABOkOj_WhEAXqA11U&libraries=places&callback=initMap" async defer></script>
+        </section>
+        <section class="section-cities" id="cityShown">
+            <ul class="cities-showcase clearfix">
+                <li>
+                    <figure class="city-photo">
+                        <img src="1.jpg" alt="City 1">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="2.jpg" alt="City 2">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="3.jpg" alt="City 3">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="4.jpg" alt="City 4">
+                    </figure>
+                </li>
+            </ul> 
+            <ul class="cities-showcase clearfix">
+                <li>
+                    <figure class="city-photo">
+                        <img src="5.jpg" alt="City 5">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="6.jpg" alt="City 6">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="7.jpg" alt="City 7">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="city-photo">
+                        <img src="8.jpg" alt="City 8">
+                    </figure>
+                </li>
+            </ul>         
+        </section>
+        <section class="section-form" id="contact">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input class="type-text" type="text" name="name" id="name" placeholder="Your name">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" type="find-us" >
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search Engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="news ">Newletter?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="news" id="news" checked>Yes Please
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="message">Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer id="about">
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li>Blog</li>
+                        <li>Press</li>
+                        <li>ios App</li>
+                        <li>Android App</li>
+                        <li>Medium</li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-link">
+                        <li><i class="icon ion-logo-facebook"></i></li>
+                        <li><i class="icon ion-logo-twitter"></i></li>
+                        <li><i class="icon ion-logo-googleplus"></i></li>
+                        <li><i class="icon ion-logo-linkedin"></i></li>                            
+                    </ul>
+                </div>                
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2019 by Dinesh Kumar. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <div>  
+            <a class="back-to-top" id="toTop" href="#Home"></a>          
+        </div>
+    </body>
+</html>
